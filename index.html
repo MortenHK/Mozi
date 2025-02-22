@@ -7,39 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigasjonsmeny -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#forside">Forside</a></li>
-            <li><a href="#hobbyer">Mozart</a></li>
-            <li><a href="#bilde">Bilde</a></li>
-            <li><a href="#venner">Venner</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-    </nav>
+    <!-- Navigasjonsfaner -->
+    <div class="tabs">
+        <button class="tab-button active" onclick="showTab('forside')">Forside</button>
+        <button class="tab-button" onclick="showTab('mozart')">Mozart</button>
+        <button class="tab-button" onclick="showTab('bilde')">Bilde</button>
+        <button class="tab-button" onclick="showTab('venner')">Venner</button>
+        <button class="tab-button" onclick="showTab('kontakt')">Kontakt</button>
+    </div>
 
-    <!-- Seksjoner -->
-    <section id="Forside">
+    <!-- Faner Innhold -->
+    <div id="forside" class="tab-content active">
         <h2>Forside</h2>
         <p>Dette er en side om Mozart.</p>
-    </section>
-    
-    <section id="Mozart">
+    </div>
+
+    <div id="mozart" class="tab-content">
         <h2>Om Mozart</h2>
         <p>Mozart er en bolonka på 20 måneder.</p>
-    </section>
+    </div>
 
-    <section id="bilde">
+    <div id="bilde" class="tab-content">
         <h2>Her er et bilde av Mozart!</h2>
-        <img src="Mozi.jpg" alt="bilde av Mozart" width="500">
-    </section>
+        <img src="Mozi.jpg" alt="Bilde av Mozart" width="500" style="border-radius: 8px;">
+    </div>
 
-    <section id="venner">
+    <div id="venner" class="tab-content">
         <h2>Venner av Mozart</h2>
         <p>Mozart sin bestevenn var Kito.</p>
-    </section>
+    </div>
 
-    <section id="kontakt">
+    <div id="kontakt" class="tab-content">
         <h2>Kontakt meg</h2>
         <form action="mailto:example@domain.com" method="get">
             <label for="navn">Navn:</label>
@@ -53,6 +51,8 @@
             
             <input type="submit" value="Send">
         </form>
-    </section>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
