@@ -75,7 +75,7 @@ section {
     padding: 20px;
     margin: 0; /* Fjerner margin på seksjonene */
     border-radius: 10px;
-    background-color: white;
+    background-color: #9E7B61;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
 }
@@ -92,7 +92,7 @@ section {
     background-position: center;
     background-attachment: fixed;
     padding: 40px;
-    color: white;
+    color: #9E7B61;
     position: relative;
     min-height: 300px;
     border-radius: 10px;
@@ -117,7 +117,7 @@ section {
 #kontakt {
     text-align: center; /* Midtstiller teksten */
     padding: 40px;
-    background-color: white;
+    background-color: #9E7B61;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin: 20px auto;
