@@ -1,20 +1,17 @@
-function showTab(tabName) {
-    // Skjul alle faner
-    var tabContents = document.querySelectorAll('.tab-content');
-    tabContents.forEach(function(tab) {
+function showTab(tabId) {
+    // Skjuler alle faner
+    document.querySelectorAll('.tab-content').forEach(tab => {
         tab.classList.remove('active');
     });
 
-    // Fjern aktiv klasse fra alle knappene
-    var tabButtons = document.querySelectorAll('.tab-button');
-    tabButtons.forEach(function(button) {
+    // Viser valgt fane
+    document.getElementById(tabId).classList.add('active');
+
+    // Fjerner aktiv status fra alle knapper
+    document.querySelectorAll('.tab-button').forEach(button => {
         button.classList.remove('active');
     });
 
-    // Vis den valgte fanen
-    document.getElementById(tabName).classList.add('active');
-    
-    // Sett den valgte knappen til aktiv
-    var activeButton = document.querySelector(`[onclick="showTab('${tabName}')"]`);
-    activeButton.classList.add('active');
+    // Legger til aktiv status på klikket knapp
+    event.currentTarget.classList.add('active');
 }
