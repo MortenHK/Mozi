@@ -1,10 +1,10 @@
 /* Generelle stilinnstillinger */
 body {
     font-family: 'Lato', sans-serif;
-    background-color: #f5f0e1; /* Lys brun bakgrunnsfarge */
-    color: #4d4d4d; /* Mørk grå tekstfarge */
-    margin: 0; /* Fjerner margin fra body */
-    padding: 0; /* Fjerner padding fra body */
+    background-color: #f5f0e1;
+    color: #4d4d4d;
+    margin: 0;
+    padding: 0;
 }
 
 /* Navigasjonsmeny */
@@ -12,94 +12,63 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #9E7B61; /* Bakgrunnsfarge inspirert av hundens pels */
+    background-color: #9E7B61;
     padding: 15px 30px;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 1000;
-    margin: 0; /* Fjerner margin rundt navbar */
 }
 
-/* Fanenes knapper (fjern marger) */
-.navbar ul {
+/* Justering for faneknapper */
+.tabs {
     display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0; /* Fjerner margin på listen */
+    gap: 10px;
 }
 
-.navbar li {
-    margin-right: 0; /* Fjerner margin mellom knappene */
-}
-
-.navbar a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 10px 15px;
-    border: none; /* Fjerner kanten rundt knappene */
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 0; /* Fjerner margin rundt lenkene */
-    box-shadow: none; /* Fjerner skygge */
-}
-
-.navbar a:hover {
-    background-color: #7C5A3C; /* Mørkere brunt ved hover */
-    transform: scale(1.1); /* For å gjøre knappene litt større ved hover */
-}
-
-/* Fanenes knapper (tab-button) */
 .tab-button {
-    background-color: #9E7B61; /* Bakgrunnsfarge */
+    background-color: transparent; /* Samme farge som navbar */
     color: white;
     font-size: 18px;
     padding: 10px 15px;
-    border: none; /* Fjerner kanten rundt knappene */
-    border-radius: 5px;
-    text-align: center;
+    border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: none; /* Fjerner skygger */
-    margin: 0; /* Fjerner margin rundt knappene */
 }
 
 .tab-button:hover {
-    background-color: #7C5A3C; /* Mørkere farge ved hover */
+    background-color: #7C5A3C;
     transform: scale(1.05);
 }
 
-/* Seksjoner */
-section {
+/* Innhold (gjem alle fanene unntatt den aktive) */
+.tab-content {
     display: none;
-    padding: 20px;
-    margin: 0; /* Fjerner margin på seksjonene */
-    border-radius: 0px;
-    background-color: #f5f0e1;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
+    padding: 80px 20px;
+    text-align: center;
+    min-height: 300px;
 }
 
-/* Aktiv seksjon som vises */
 .tab-content.active {
     display: block;
 }
 
+/* Fiks for bakgrunnsbilde på forside */
 #forside {
-    background-image: url('mozart-bakgrunn.jpg'); /* Erstatt med riktig bildefil */
-    background-size: cover; /* Sørger for at bildet dekker hele området */
-    background-position: center; /* Sentrerer bildet */
-    background-repeat: no-repeat; /* Hindrer gjentakelse */
-    min-height: 100vh; /* Setter høyden til hele skjermen */
+    background-image: url('mozart-bakgrunn.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white; /* Gjør teksten synlig over bildet */
+    color: white;
     position: relative;
 }
 
-/* Legg til en mørk overlay for bedre lesbarhet */
+/* Mørkt lag over bildet for bedre kontrast */
 #forside::before {
     content: "";
     position: absolute;
@@ -107,63 +76,53 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Halvtransparent mørk bakgrunn */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 0;
 }
 
 #forside h2, #forside p {
     position: relative;
-    z-index: 1; /* Sørger for at tekst er over bakgrunn */
-}
-/* Seksjon for Kontakt */
-#kontakt {
-    text-align: center; /* Midtstiller teksten */
-    padding: 40px;
-    background-color: #f5f0e1;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0px;
-    margin: 20px auto;
-    max-width: 600px; /* Begrens bredden på seksjonen */
+    z-index: 1;
 }
 
-/* Kontaktinformasjon */
+/* Kontaktseksjon */
+#kontakt {
+    text-align: center;
+    padding: 60px 20px;
+}
+
 .contact-info p {
     font-size: 18px;
-    color: #4d4d4d; /* Mørk grå tekstfarge */
-    margin: 10px 0; /* Litt mellomrom mellom elementene */
+    margin: 10px 0;
 }
 
 .contact-info a {
-    color: #f5f0e1; /* Bruk den samme fargen som navbaren */
+    color: #9E7B61;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .contact-info a:hover {
-    color: #7C5A3C; /* Endre farge ved hover */
+    color: #7C5A3C;
 }
 
-/* Fjerner margin på formfeltene også */
-input, textarea {
+/* Kontaktskjema */
+.contact-form input, .contact-form textarea {
+    width: 80%;
+    max-width: 500px;
     padding: 10px;
-    border-radius: 0px;
+    margin: 10px 0;
     border: 1px solid #C79E6B;
-    width: 100%;
-    max-width: 600px;
-    margin: 0; /* Fjerner margin rundt input/textarea */
+    border-radius: 5px;
 }
 
-input[type="submit"] {
-    background-color: #f5f0e1;
+.contact-form button {
+    background-color: #9E7B61;
     color: white;
-    cursor: pointer;
     border: none;
     padding: 10px 20px;
-    border-radius: 0px;
-    margin: 0; /* Fjerner margin på knappen */
+    cursor: pointer;
 }
 
-input[type="submit"]:hover {
+.contact-form button:hover {
     background-color: #7C5A3C;
-    transform: scale(1.05);
 }
