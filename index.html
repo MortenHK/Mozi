@@ -48,7 +48,21 @@
         <p>Telefon: 815 493 00</p>
         <p>E-post: <a href="mailto:Mozi@mozi.no">Mozi@mozi.no</a></p>
     </div>
+
+    <form class="contact-form" action="mailto:Mozi@mozi.no" method="post" enctype="text/plain">
+        <label for="navn">Navn:</label>
+        <input type="text" id="navn" name="navn" required>
+
+        <label for="email">E-post:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="melding">Melding:</label>
+        <textarea id="melding" name="melding" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
 </section>
+
 
 
     <script src="script.js"></script>
