@@ -3,53 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min nettside</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Velkommen til min nettside! Her finner du informasjon om meg og kontaktmuligheter.">
+    <meta name="keywords" content="personlig nettside, om meg, kontakt, portfolio">
+    <title>Min Statisk Nettside</title>
+    <link rel="stylesheet" href="style.css"> <!-- Kobler til CSS -->
 </head>
 <body>
-    <!-- Navigasjonsmeny -->
-    <nav class="navbar">
+    <header>
+        <h1>Velkommen til min nettside!</h1>
+    </header>
+
+    <nav>
         <ul>
-            <li><a href="#hobbyer">Hobbyer</a></li>
-            <li><a href="#bilde">Bilde</a></li>
-            <li><a href="#lenker">Lenker</a></li>
+            <li><a href="#om">Om meg</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
         </ul>
     </nav>
 
-    <!-- Seksjoner -->
-    <section id="hobbyer">
-        <h2>Mine Hobbyer</h2>
-        <p>Jeg elsker å reise, fotografere og lære om teknologi.</p>
-    </section>
+    <main>
+        <section id="om">
+            <h2>Om meg</h2>
+            <p>Hei! Jeg er [Ditt navn], og dette er min personlige nettside. Her kan du finne informasjon om meg og hvordan du kan kontakte meg.</p>
+        </section>
 
-    <section id="bilde">
-        <h2>Her er et bilde av meg!</h2>
-        <img src="bilde.jpg" alt="Bilde av meg" width="500">
-    </section>
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <p>Du kan kontakte meg på e-post: <a href="mailto:example@domain.com">example@domain.com</a></p>
+        </section>
+    </main>
 
-    <section id="lenker">
-        <h2>Lenker til mine profiler</h2>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/dittnavn">LinkedIn</a></li>
-            <li><a href="https://github.com/dittnavn">GitHub</a></li>
-        </ul>
-    </section>
-
-    <section id="kontakt">
-        <h2>Kontakt meg</h2>
-        <form action="mailto:example@domain.com" method="get">
-            <label for="navn">Navn:</label>
-            <input type="text" id="navn" name="navn" required><br><br>
-            
-            <label for="email">E-post:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="melding">Melding:</label><br>
-            <textarea id="melding" name="melding" rows="4" cols="50" required></textarea><br><br>
-            
-            <input type="submit" value="Send">
-        </form>
-    </section>
+    <footer>
+        <p>&copy; 2025 [Ditt navn]. Alle rettigheter reservert.</p>
+    </footer>
 </body>
 </html>
