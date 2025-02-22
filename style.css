@@ -86,7 +86,7 @@ section {
 }
 
 /* For å gjøre bakgrunnen litt mørkere og få teksten til å skille seg ut */
-#hobbyer {
+#forside {
     background-image: url('mozart-bakgrunn.jpg'); /* Erstatt med din bildefil */
     background-size: cover;
     background-position: center;
@@ -98,12 +98,12 @@ section {
     border-radius: 10px;
 }
 
-#hobbyer h2, #hobbyer p {
+#forside h2, #forside p {
     position: relative;
     z-index: 1; /* Sørger for at tekst vises foran bakgrunnsbildet */
 }
 
-#hobbyer::before {
+#forside::before {
     content: '';
     position: absolute;
     top: 0;
@@ -117,7 +117,7 @@ section {
 #kontakt {
     text-align: center; /* Midtstiller teksten */
     padding: 40px;
-    background-color: #9E7B61;
+    background-color: #f5f0e1;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin: 20px auto;
@@ -132,7 +132,7 @@ section {
 }
 
 .contact-info a {
-    color: #9E7B61; /* Bruk den samme fargen som navbaren */
+    color: #f5f0e1; /* Bruk den samme fargen som navbaren */
     text-decoration: none;
     font-weight: bold;
 }
@@ -152,7 +152,7 @@ input, textarea {
 }
 
 input[type="submit"] {
-    background-color: #9E7B61;
+    background-color: #f5f0e1;
     color: white;
     cursor: pointer;
     border: none;
