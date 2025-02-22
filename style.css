@@ -113,6 +113,33 @@ section {
     background-color: rgba(0, 0, 0, 0.5); /* Mørk halvtransparent bakgrunn */
     z-index: 0; /* Sørger for at overlegget er bak teksten */
 }
+/* Seksjon for Kontakt */
+#kontakt {
+    text-align: center; /* Midtstiller teksten */
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px; /* Begrens bredden på seksjonen */
+}
+
+/* Kontaktinformasjon */
+.contact-info p {
+    font-size: 18px;
+    color: #4d4d4d; /* Mørk grå tekstfarge */
+    margin: 10px 0; /* Litt mellomrom mellom elementene */
+}
+
+.contact-info a {
+    color: #9E7B61; /* Bruk den samme fargen som navbaren */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #7C5A3C; /* Endre farge ved hover */
+}
 
 /* Fjerner margin på formfeltene også */
 input, textarea {
