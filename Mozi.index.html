@@ -37,3 +37,58 @@
     </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min nettside</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigasjonsmeny -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#hobbyer">Hobbyer</a></li>
+            <li><a href="#bilde">Bilde</a></li>
+            <li><a href="#lenker">Lenker</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seksjoner -->
+    <section id="hobbyer">
+        <h2>Mine Hobbyer</h2>
+        <p>Jeg elsker å reise, fotografere og lære om teknologi.</p>
+    </section>
+
+    <section id="bilde">
+        <h2>Her er et bilde av meg!</h2>
+        <img src="bilde.jpg" alt="Bilde av meg" width="500">
+    </section>
+
+    <section id="lenker">
+        <h2>Lenker til mine profiler</h2>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/dittnavn">LinkedIn</a></li>
+            <li><a href="https://github.com/dittnavn">GitHub</a></li>
+        </ul>
+    </section>
+
+    <section id="kontakt">
+        <h2>Kontakt meg</h2>
+        <form action="mailto:example@domain.com" method="get">
+            <label for="navn">Navn:</label>
+            <input type="text" id="navn" name="navn" required><br><br>
+            
+            <label for="email">E-post:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="melding">Melding:</label><br>
+            <textarea id="melding" name="melding" rows="4" cols="50" required></textarea><br><br>
+            
+            <input type="submit" value="Send">
+        </form>
+    </section>
+</body>
+</html>
