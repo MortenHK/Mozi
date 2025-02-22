@@ -74,7 +74,7 @@ section {
     display: none;
     padding: 20px;
     margin: 0; /* Fjerner margin på seksjonene */
-    border-radius: 10px;
+    border-radius: 0px;
     background-color: #9E7B61;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -119,7 +119,7 @@ section {
     padding: 40px;
     background-color: #f5f0e1;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 0px;
     margin: 20px auto;
     max-width: 600px; /* Begrens bredden på seksjonen */
 }
@@ -144,7 +144,7 @@ section {
 /* Fjerner margin på formfeltene også */
 input, textarea {
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 0px;
     border: 1px solid #C79E6B;
     width: 100%;
     max-width: 600px;
@@ -157,7 +157,7 @@ input[type="submit"] {
     cursor: pointer;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 0px;
     margin: 0; /* Fjerner margin på knappen */
 }
 
