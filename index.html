@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigasjonsfaner med logo til venstre -->
+
+    <!-- Navigasjonsmeny -->
     <div class="navbar">
         <div class="logo">
-            <img src="logo.png" alt="Logo" height="40"> <!-- Legg til logo-bildet ditt her -->
+            <img src="logo.png" alt="Logo" height="40"> <!-- Bytt ut med riktig logo -->
         </div>
         <div class="tabs">
             <button class="tab-button active" onclick="showTab('forside')">Forside</button>
@@ -21,7 +22,7 @@
         </div>
     </div>
 
-    <!-- Faner Innhold -->
+    <!-- Innhold for fanene -->
     <section id="forside" class="tab-content active">
         <h2>Forside</h2>
         <p>Dette er en side om Mozart.</p>
@@ -34,7 +35,7 @@
 
     <section id="bilde" class="tab-content">
         <h2>Her er et bilde av Mozart!</h2>
-        <img src="Mozi.jpg" alt="Bilde av Mozart" width="500" style="border-radius: 8px;">
+        <img src="Mozi.jpg" alt="Bilde av Mozart" width="500">
     </section>
 
     <section id="venner" class="tab-content">
@@ -42,28 +43,27 @@
         <p>Mozart sin bestevenn var Kito.</p>
     </section>
 
-<section id="kontakt">
-    <h2>Kontakt</h2>
-    <div class="contact-info">
-        <p>Telefon: 815 493 00</p>
-        <p>E-post: <a href="mailto:Mozi@mozi.no">Mozi@mozi.no</a></p>
-    </div>
+    <!-- Kontakt-seksjonen -->
+    <section id="kontakt" class="tab-content">
+        <h2>Kontakt</h2>
+        <div class="contact-info">
+            <p>Telefon: 815 493 00</p>
+            <p>E-post: <a href="mailto:Mozi@mozi.no">Mozi@mozi.no</a></p>
+        </div>
 
-    <form class="contact-form" action="mailto:Mozi@mozi.no" method="post" enctype="text/plain">
-        <label for="navn">Navn:</label>
-        <input type="text" id="navn" name="navn" required>
+        <form class="contact-form" action="mailto:Mozi@mozi.no" method="post" enctype="text/plain">
+            <label for="navn">Navn:</label>
+            <input type="text" id="navn" name="navn" required>
 
-        <label for="email">E-post:</label>
-        <input type="email" id="email" name="email" required>
+            <label for="email">E-post:</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="melding">Melding:</label>
-        <textarea id="melding" name="melding" rows="4" required></textarea>
+            <label for="melding">Melding:</label>
+            <textarea id="melding" name="melding" rows="4" required></textarea>
 
-        <button type="submit">Send</button>
-    </form>
-</section>
-
-
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
     <script src="script.js"></script>
 </body>
