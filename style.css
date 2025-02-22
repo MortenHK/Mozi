@@ -34,7 +34,7 @@ h2 {
     cursor: pointer;
     background-color: #8B4513; /* Samme brunfarge som bakgrunnen */
     color: white;
-    border: 1px solid #8B4513; /* Samme farge som bakgrunnen */
+    border: none; /* Samme farge som bakgrunnen */
     margin: 0 5px;
     transition: background-color 0.3s, border-color 0.3s;
 }
