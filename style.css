@@ -85,33 +85,35 @@ section {
     display: block;
 }
 
-/* For å gjøre bakgrunnen litt mørkere og få teksten til å skille seg ut */
 #forside {
-    background-image: url('mozart-bakgrunn.jpg'); /* Erstatt med din bildefil */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 40px;
-    color: #9E7B61;
+    background-image: url('mozart-bakgrunn.jpg'); /* Erstatt med riktig bildefil */
+    background-size: cover; /* Sørger for at bildet dekker hele området */
+    background-position: center; /* Sentrerer bildet */
+    background-repeat: no-repeat; /* Hindrer gjentakelse */
+    min-height: 100vh; /* Setter høyden til hele skjermen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* Gjør teksten synlig over bildet */
     position: relative;
-    min-height: 300px;
-    border-radius: 10px;
+}
+
+/* Legg til en mørk overlay for bedre lesbarhet */
+#forside::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Halvtransparent mørk bakgrunn */
+    z-index: 0;
 }
 
 #forside h2, #forside p {
     position: relative;
-    z-index: 1; /* Sørger for at tekst vises foran bakgrunnsbildet */
-}
-
-#forside::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Mørk halvtransparent bakgrunn */
-    z-index: 0; /* Sørger for at overlegget er bak teksten */
+    z-index: 1; /* Sørger for at tekst er over bakgrunn */
 }
 /* Seksjon for Kontakt */
 #kontakt {
