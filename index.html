@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Navigasjonsmeny -->
+    <!-- Navigasjonsfaner med logo til venstre -->
     <div class="navbar">
         <div class="logo">
-            <img src="logo.png" alt="Logo" height="40"> <!-- Bytt ut med riktig logo -->
+            <img src="logo.png" alt="Logo" height="40"> <!-- Legg til logo-bildet ditt her -->
         </div>
         <div class="tabs">
             <button class="tab-button active" onclick="showTab('forside')">Forside</button>
@@ -22,7 +21,7 @@
         </div>
     </div>
 
-    <!-- Innhold for fanene -->
+    <!-- Faner Innhold -->
     <section id="forside" class="tab-content active">
         <h2>Forside</h2>
         <p>Dette er en side om Mozart.</p>
@@ -35,7 +34,7 @@
 
     <section id="bilde" class="tab-content">
         <h2>Her er et bilde av Mozart!</h2>
-        <img src="Mozi.jpg" alt="Bilde av Mozart" width="500">
+        <img src="Mozi.jpg" alt="Bilde av Mozart" width="500" style="border-radius: 8px;">
     </section>
 
     <section id="venner" class="tab-content">
@@ -43,7 +42,6 @@
         <p>Mozart sin bestevenn var Kito.</p>
     </section>
 
-    <!-- Kontakt-seksjonen -->
     <section id="kontakt" class="tab-content">
         <h2>Kontakt</h2>
         <div class="contact-info">
