@@ -4,38 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Min nettside</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Lato font -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigasjonsmeny -->
-    <nav class="navbar">
+    <!-- Navigasjonsfaner med logo til venstre -->
+    <div class="navbar">
         <div class="logo">
-            <img src="logo.png" alt="Logo" width="50">
+            <img src="logo.png" alt="Logo" height="40"> <!-- Legg til logo-bildet ditt her -->
         </div>
-        <ul>
-            <li><a href="#forside" class="tab-button">Forside</a></li>
-            <li><a href="#hobbyer" class="tab-button">Mozart</a></li>
-            <li><a href="#bilde" class="tab-button">Bilde</a></li>
-            <li><a href="#venner" class="tab-button">Venner</a></li>
-            <li><a href="#kontakt" class="tab-button">Kontakt</a></li>
-        </ul>
-    </nav>
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('forside')">Forside</button>
+            <button class="tab-button" onclick="showTab('mozart')">Mozart</button>
+            <button class="tab-button" onclick="showTab('bilde')">Bilde</button>
+            <button class="tab-button" onclick="showTab('venner')">Venner</button>
+            <button class="tab-button" onclick="showTab('kontakt')">Kontakt</button>
+        </div>
+    </div>
 
-    <!-- Seksjoner -->
-    <section id="forside" class="tab-content">
+    <!-- Faner Innhold -->
+    <section id="forside" class="tab-content active">
         <h2>Forside</h2>
         <p>Dette er en side om Mozart.</p>
     </section>
 
-    <section id="hobbyer" class="tab-content">
+    <section id="mozart" class="tab-content">
         <h2>Om Mozart</h2>
         <p>Mozart er en bolonka på 20 måneder.</p>
     </section>
 
     <section id="bilde" class="tab-content">
         <h2>Her er et bilde av Mozart!</h2>
-        <img src="Mozi.jpg" alt="bilde av Mozart" width="500">
+        <img src="Mozi.jpg" alt="Bilde av Mozart" width="500" style="border-radius: 8px;">
     </section>
 
     <section id="venner" class="tab-content">
@@ -45,19 +44,20 @@
 
     <section id="kontakt" class="tab-content">
         <h2>Kontakt meg</h2>
-        <form action="https://formspree.io/f/{unique-id}" method="POST">
+        <form action="mailto:example@domain.com" method="get">
             <label for="navn">Navn:</label>
             <input type="text" id="navn" name="navn" required><br><br>
-
+            
             <label for="email">E-post:</label>
             <input type="email" id="email" name="email" required><br><br>
-
+            
             <label for="melding">Melding:</label><br>
             <textarea id="melding" name="melding" rows="4" cols="50" required></textarea><br><br>
-
+            
             <input type="submit" value="Send">
         </form>
     </section>
 
+    <script src="script.js"></script>
 </body>
 </html>
