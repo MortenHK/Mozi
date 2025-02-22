@@ -1,71 +1,107 @@
-/* Generelle stiler */
+/* Generelle stilinnstillinger */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F5F5F5; /* Lys beige bakgrunn */
+    font-family: 'Lato', sans-serif;
+    background-color: #f2f2f2; /* Lys bakgrunnsfarge */
+    color: #4d4d4d; /* Mørk grå tekstfarge */
     margin: 0;
     padding: 0;
-    color: #3E2C41; /* Mørk brun tekst for god kontrast */
 }
 
-/* Navigasjonsbar med logo og faner */
+/* Navigasjonsmeny */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #8B5E3C; /* Brunfarge inspirert av hundens pels */
-    padding: 10px 20px;
+    background-color: #9E7B61; /* Bakgrunnsfarge inspirert av hundens pels */
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.navbar .logo img {
-    height: 40px; /* Juster høyden på logoen */
-}
-
-.tabs {
+.navbar ul {
     display: flex;
-    justify-content: flex-start;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.tab-button {
-    padding: 10px 20px;
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
     font-size: 18px;
-    cursor: pointer;
-    background-color: #C79E6B; /* Lysere beige bakgrunn på knappene */
-    color: #3E2C41; /* Mørk tekstfarge */
-    border: 1px solid #C79E6B; /* Samme beige farge for kantene */
-    margin: 0 5px;
-    transition: background-color 0.3s, border-color 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar a:hover {
+    background-color: #7C5A3C; /* Mørkere brunt ved hover */
+    transform: scale(1.1);
+}
+
+/* Fanenes bakgrunnsfarger - basert på hundens farger */
+.tab-button {
+    background-color: #9E7B61; /* Lys brun/beige farge */
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
 .tab-button:hover {
-    background-color: #A97C55; /* Mørkere beige ved hover */
-    border-color: #A97C55; /* Mørkere kantfarge ved hover */
+    background-color: #7C5A3C; /* Mørkere brun ved hover */
+    transform: scale(1.05);
 }
 
-.tab-button.active {
-    background-color: #8B5E3C; /* Mørk brun bakgrunn for aktiv knapp */
-    color: white; /* Hvit tekst på aktiv knapp */
-    border-color: #8B5E3C; /* Mørk brun kantfarge for aktiv knapp */
-}
-
-/* Seksjoner (fanenes innhold) */
+/* Seksjoner */
 section {
-    background-color: #FFFFFF; /* Hvit bakgrunn for seksjoner */
-    margin: 20px;
+    display: none;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: none; /* Skjul seksjonene som standard */
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-section.active {
-    display: block; /* Vis seksjonen når den er aktiv */
+/* Aktiv seksjon som vises */
+.tab-content.active {
+    display: block;
 }
 
-section h2 {
-    color: #8B5E3C; /* Bruk en brunfarge til overskrifter */
+/* Logo */
+.logo img {
+    width: 50px;
 }
 
-section img {
-    border-radius: 8px;
-    margin-top: 20px;
+/* Input og tekstfelt */
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #C79E6B;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+input:focus, textarea:focus {
+    border-color: #8B5E3C;
+}
+
+input[type="submit"] {
+    background-color: #9E7B61;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #7C5A3C;
+    transform: scale(1.05);
 }
