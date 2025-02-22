@@ -1,10 +1,10 @@
 /* Generelle stilinnstillinger */
 body {
     font-family: 'Lato', sans-serif;
-    background-color: #f5f0e1;
-    color: #4d4d4d;
-    margin: 0;
-    padding: 0;
+    background-color: #f5f0e1; /* Lys brun bakgrunnsfarge */
+    color: #4d4d4d; /* Mørk grå tekstfarge */
+    margin: 0; /* Fjerner margin fra body */
+    padding: 0; /* Fjerner padding fra body */
 }
 
 /* Navigasjonsmeny */
@@ -12,107 +12,78 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #9E7B61;
+    background-color: #9E7B61; /* Bakgrunnsfarge inspirert av hundens pels */
     padding: 15px 30px;
-    position: fixed;
-    width: 100%;
+    position: sticky;
     top: 0;
     z-index: 1000;
+    margin: 0; /* Fjerner margin rundt navbar */
 }
 
-/* Justering for faneknapper */
-.tabs {
+/* Fanenes knapper */
+.navbar .tabs {
     display: flex;
-    gap: 10px;
 }
 
-.tab-button {
-    background-color: transparent; /* Samme farge som navbar */
+.navbar .tab-button {
+    background-color: #9E7B61;
     color: white;
     font-size: 18px;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
-.tab-button:hover {
-    background-color: #7C5A3C;
-    transform: scale(1.05);
+.navbar .tab-button:hover {
+    background-color: #7C5A3C; /* Mørkere brunt ved hover */
 }
 
-/* Innhold (gjem alle fanene unntatt den aktive) */
+.navbar .tab-button.active {
+    background-color: #7C5A3C; /* For å markere aktiv fane */
+}
+
+/* Seksjoner */
 .tab-content {
     display: none;
-    padding: 80px 20px;
-    text-align: center;
-    min-height: 300px;
+    padding: 20px;
+    background-color: #9E7B61;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 .tab-content.active {
     display: block;
 }
 
-/* Fiks for bakgrunnsbilde på forside */
-#forside {
-    background-image: url('mozart-bakgrunn.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-}
-
-/* Mørkt lag over bildet for bedre kontrast */
-#forside::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-}
-
-#forside h2, #forside p {
-    position: relative;
-    z-index: 1;
-}
-
-/* Kontaktseksjon */
+/* Kontakt seksjon */
 #kontakt {
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px;
+    background-color: #f5f0e1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info p {
     font-size: 18px;
-    margin: 10px 0;
+    color: #4d4d4d;
 }
 
-.contact-info a {
-    color: #9E7B61;
-    text-decoration: none;
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.contact-info a:hover {
-    color: #7C5A3C;
-}
-
-/* Kontaktskjema */
 .contact-form input, .contact-form textarea {
-    width: 80%;
-    max-width: 500px;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #C79E6B;
+    margin: 5px 0;
     border-radius: 5px;
+    width: 300px;
 }
 
 .contact-form button {
@@ -120,6 +91,7 @@ body {
     color: white;
     border: none;
     padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
